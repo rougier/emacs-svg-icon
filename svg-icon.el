@@ -54,7 +54,7 @@
 ;; can be inserted inside a text without disturbing alignment.
 ;;
 ;; Note: Each icon is cached locally to speed-up loading the next time
-;;       you use it. If for some reason the cache is corrupted you can
+;;       you use it.  If for some reason the cache is corrupted you can
 ;;       force reload using the svg-icon-get-data function.
 ;;
 ;; If you want to add new collections (i.e. URL), make sure the icons
@@ -149,7 +149,6 @@ the icon. Default size is 2x1 characters."
                           :viewBox svg-viewbox
                           :stroke-width 0
                           :fill fg-color)))
-    (message svg-viewbox)
     (svg-rectangle svg view-x view-y view-width view-height
                    :fill bg-color)
 
