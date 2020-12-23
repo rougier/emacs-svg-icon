@@ -40,14 +40,14 @@ are monochrome and that their size are consistent.
 
 ```lisp
 ;; Direct insertion
-(insert-image (svg-icon "material" "editor/attach_file"))
+(insert-image (svg-icon "material" "attachment"))
 (insert-image (svg-icon "bootstrap" "alarm"))
 (insert-image (svg-icon "octicons" "alert"))
 (insert-image (svg-icon "boxicons" "dizzy"))
 
 ;; Defining a "string icon"
 (setq material-attach (propertize "--"
-                      'display (svg-icon "material" "editor/attach_file")))
+                      'display (svg-icon "material" "attachment")))
 
 (insert (format "[%s]" material-attach))
 ```

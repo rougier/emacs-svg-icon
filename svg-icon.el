@@ -39,11 +39,11 @@
 ;;   version 11.2.0 (December 2020), this collection offers 201 icons.
 ;;   Gallery available at https://primer.style/octicons/
 ;;
-;; - Material (https://github.com/google/material-design-icons),
-;;   available under an Apache 2.0 license.  As of version 4.0.0
-;;   (December 2020), this collection offers 500+ icons in 4 styles
+;; - Material (https://github.com/Templarian/MaterialDesign),
+;;   available under an Apache 2.0 license.  As of version 5.8.55
+;;   (December 2020), this collection offers 5000+ icons in 4 styles
 ;;   (filled, outlined, rounded, sharp).  Gallery available at
-;;   https://material.io/resources/icons/?style=baseline
+;;   https://materialdesignicons.com/
 ;;
 ;; - Bootstrap (https://github.com/twbs/icons), available under an MIT
 ;;   license.  As of version 1.2.1 (December 2020), this collection
@@ -70,7 +70,7 @@
 
 (defcustom  svg-icon-collections
   '(("bootstrap" . "https://icons.getbootstrap.com/icons/%s.svg")
-    ("material" . "https://raw.githubusercontent.com/google/material-design-icons/master/src/%s/materialicons/24px.svg")
+    ("material" . "https://raw.githubusercontent.com/Templarian/MaterialDesign/master/svg/%s.svg")
     ("octicons" . "https://raw.githubusercontent.com/primer/octicons/master/icons/%s-24.svg")
     ("boxicons" . "https://boxicons.com/static/img/svg/regular/bx-%s.svg"))
     
