@@ -161,23 +161,5 @@ the icon. Default size is 2x1 characters."
     (svg-image svg :ascent 'center)))
 
 
-;; ;; Direct insertion
-;; (insert-image (svg-icon "material" "editor/attach_file"))
-;; (insert-image (svg-icon "bootstrap" "alarm"))
-;; (insert-image (svg-icon "octicons" "alert"))
-;; (insert-image (svg-icon "boxicons" "dizzy"))
-;; --------
-;;     
-;; --------
-;; (insert-image (svg-icon "boxicons" "dizzy" nil nil 3))  
-;; ;; Defining a "string icon"
-;; (setq material-attach (propertize "--"
-;;                       'display (svg-icon "material" "editor/attach_file")))
-
-;; (insert (format "[%s]" material-attach))
-;; ----
-;; [-]
-;; ----
-
 (provide 'svg-icon)
 ;;; svg-icon.el ends here
