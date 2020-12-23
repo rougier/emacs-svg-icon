@@ -52,4 +52,6 @@ are monochrome and that their size are consistent.
 (insert (format "[%s]" material-attach))
 ```
 
+**Output**
+
 ![](screenshot.png)
