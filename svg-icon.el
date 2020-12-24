@@ -138,8 +138,8 @@ the icon. Default size is 2x1 characters."
          (view-y (- view-y delta-h))
          (view-height (+ view-height (* delta-h 2)))
 
-         ;; 
-         (zoom (max 1 (truncate (or zoom 1.0))))
+         ;; Zoom the icon by using integer factor only
+         (zoom (max 1 (truncate (or zoom 1))))
          (svg-width  (* svg-width zoom))
          (svg-height (* svg-height zoom))
 
@@ -159,7 +159,6 @@ the icon. Default size is 2x1 characters."
              (fill (or (cdr (assoc 'fill attrs)) fg-color)))
         (svg-node svg 'path :d path :fill fill)))
     (svg-image svg :ascent 'center)))
-
 
 (provide 'svg-icon)
 ;;; svg-icon.el ends here
