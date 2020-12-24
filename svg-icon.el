@@ -158,7 +158,7 @@ the icon. Default size is 2x1 characters."
              (path (cdr (assoc 'd attrs)))
              (fill (or (cdr (assoc 'fill attrs)) fg-color)))
         (svg-node svg 'path :d path :fill fill)))
-    (svg-image svg :ascent 'center)))
+    (svg-image svg :ascent 'center :scale 1)))
 
 (provide 'svg-icon)
 ;;; svg-icon.el ends here
