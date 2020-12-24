@@ -144,7 +144,7 @@ the icon. Default size is 2x1 characters."
          (svg-height (* svg-height zoom))
 
          (svg-viewbox (format "%f %f %f %f" view-x view-y view-width view-height))
-         (fg-color (or fg-color "black"))
+         (fg-color (or fg-color (face-attribute 'default :foreground)))
          (bg-color (or bg-color "transparent"))
          (svg (svg-create svg-width svg-height
                           :viewBox svg-viewbox
@@ -162,3 +162,4 @@ the icon. Default size is 2x1 characters."
 
 (provide 'svg-icon)
 ;;; svg-icon.el ends here
+
