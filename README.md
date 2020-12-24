@@ -32,6 +32,8 @@ whose license are compatibles with GNU Emacs:
   offers 1200+ icons in 2 styles (regular & filled). Browse
   [gallery](https://icons.getbootstrap.com)
 
+  ![](bootstrap.png)
+
 The default size of an icon is exactly 2x1 characters such that it
 can be inserted inside a text without disturbing alignment.
 
