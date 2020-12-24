@@ -4,26 +4,29 @@
 This library allows to create svg icons by parsing remote collections
 whose license are compatibles with GNU Emacs:
 
-- Boxicons (https://github.com/atisawd/boxicons), available under a
+- [Boxicons](https://github.com/atisawd/boxicons), available under a
   Creative Commons 4.0 license.  As of version 2.07 (December 2020),
   this collection offers 1500 icons in two styles (regular & solid).
-  Gallery is available at https://boxicons.com/
+  Browse [gallery](available at https://boxicons.com)
+  
+  ![](boxicons.png)
+  
 
-- Octicons (https://github.com/primer/octicons), available under a
+- [Octicons](https://github.com/primer/octicons), available under a
   MIT License with some usage restriction for the GitHub logo.  As of
   version 11.2.0 (December 2020), this collection offers 201 icons.
-  Gallery available at https://primer.style/octicons/
+  [Browse gallery](https://primer.style/octicons)
 
-- Material (https://github.com/google/material-design-icons),
+- [Material](https://github.com/Templarian/MaterialDesign),
   available under an Apache 2.0 license.  As of version 4.0.0
   (December 2020), this collection offers 500+ icons in 4 styles
-  (filled, outlined, rounded, sharp).  Gallery available at
-  https://material.io/resources/icons/?style=baseline
+  (filled, outlined, rounded, sharp).
+  Browse [gallery](https://materialdesignicons.com)
 
-- Bootstrap (https://github.com/twbs/icons), available under an MIT
+- [Bootstrap](https://github.com/twbs/icons), available under an MIT
   license.  As of version 1.2.1 (December 2020), this collection
-  offers 1200+ icons in 2 styles (regular & filled).  Gallery
-  available at https://icons.getbootstrap.com/
+  offers 1200+ icons in 2 styles (regular & filled). Browse
+  [gallery](https://icons.getbootstrap.com)
 
 The default size of an icon is exactly 2x1 characters such that it
 can be inserted inside a text without disturbing alignment.
