@@ -52,7 +52,7 @@ are:
 
 - [Material](https://github.com/Templarian/MaterialDesign),
   available under an Apache 2.0 license.  As of version 4.0.0
-  (December 2020), this collection offers 500+ icons in 4 styles
+  (December 2020), this collection offers 5000+ icons in 4 styles
   (filled, outlined, rounded, sharp).
   Browse [gallery](https://materialdesignicons.com)
 
