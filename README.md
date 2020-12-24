@@ -7,7 +7,7 @@ whose license are compatibles with GNU Emacs:
 - [Boxicons](https://github.com/atisawd/boxicons), available under a
   Creative Commons 4.0 license.  As of version 2.07 (December 2020),
   this collection offers 1500 icons in two styles (regular & solid).
-  Browse [gallery](available at https://boxicons.com)
+  Browse [gallery](https://boxicons.com)
   
   ![](boxicons.png)
   
@@ -17,13 +17,15 @@ whose license are compatibles with GNU Emacs:
   version 11.2.0 (December 2020), this collection offers 201 icons.
   [Browse gallery](https://primer.style/octicons)
   
-    ![](octicons.png)
+  ![](octicons.png)
 
 - [Material](https://github.com/Templarian/MaterialDesign),
   available under an Apache 2.0 license.  As of version 4.0.0
   (December 2020), this collection offers 500+ icons in 4 styles
   (filled, outlined, rounded, sharp).
   Browse [gallery](https://materialdesignicons.com)
+
+  ![](material.png)
 
 - [Bootstrap](https://github.com/twbs/icons), available under an MIT
   license.  As of version 1.2.1 (December 2020), this collection
