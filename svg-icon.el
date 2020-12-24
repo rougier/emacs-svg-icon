@@ -79,7 +79,8 @@
 The name of the collection is used as a pointer for the various
 icon creation methods. The base-url is a string containing a %s
 such that is can be replaced with the name of a specific icon.
-User is responsible for giving the finding the proper names."
+User is responsible for finding/giving proper names for a given
+collection (there are way too many to store them)."
 
   :type '(alist :key-type (string :tag "Name")
                 :value-type (string :tag "URL"))
