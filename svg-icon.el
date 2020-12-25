@@ -63,6 +63,7 @@
 ;;; Code:
 (require 'xml)
 (require 'svg)
+(require 'color)
 
 (defgroup svg-icon nil
   "SVG icons collection created on the fly."
@@ -110,13 +111,22 @@ Cached version is returned if it exists unless FORCE-RELOAD is t."
         (url-insert-buffer-contents buffer url)
         (xml-parse-region (point-min) (point-max))))))
 
+(defun svg-icon--emacs-color-to-svg-color (color-name)
+  "Convert Emacs COLOR-NAME to #rrggbb form.
+If COLOR-NAME is unknown to Emacs, then return COLOR-NAME as-is."
+  (let ((rgb-color (color-name-to-rgb color-name)))
+    (if rgb-color
+        (apply #'color-rgb-to-hex (append rgb-color '(2)))
+      color-name)))
 
 (defun svg-icon (collection name &optional fg-color bg-color zoom)
   "Build the icon NAME from COLLECTION.
 
-Icon is drawn using FG-COLOR (default black) on a BG-COLOR background
-(default transparent). Optional integer ZOOM level control the size of
-the icon. Default size is 2x1 characters."
+Icon is drawn using FG-COLOR (default is `default' face's foreground)
+on a BG-COLOR background (default transparent). Optional integer ZOOM
+level control the size of the icon. Default size is 2x1 characters.
+FG-COLOR or BG-COLOR also could be a face.  In this case colors
+specified in `:foreground' or `:background' attribute is used."
   
   (let* ((root (svg-icon-get-data collection name))
 
@@ -144,8 +154,14 @@ the icon. Default size is 2x1 characters."
          (svg-height (* svg-height zoom))
 
          (svg-viewbox (format "%f %f %f %f" view-x view-y view-width view-height))
-         (fg-color (or fg-color (face-attribute 'default :foreground)))
-         (bg-color (or bg-color "transparent"))
+         (fg-color (svg-icon--emacs-color-to-svg-color
+                    (or (when (facep fg-color)
+                          (face-foreground fg-color nil t))
+                        fg-color (face-attribute 'default :foreground))))
+         (bg-color (svg-icon--emacs-color-to-svg-color
+                    (or (when (facep bg-color)
+                          (face-background bg-color nil t))
+                        bg-color "transparent")))
          (svg (svg-create svg-width svg-height
                           :viewBox svg-viewbox
                           :stroke-width 0
