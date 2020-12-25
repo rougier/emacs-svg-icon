@@ -119,15 +119,24 @@ If COLOR-NAME is unknown to Emacs, then return COLOR-NAME as-is."
         (apply #'color-rgb-to-hex (append rgb-color '(2)))
       color-name)))
 
-(defun svg-icon (collection name &optional fg-color bg-color zoom)
+(defun svg-icon (collection name &optional fg-color bg-color zoom margin-divider)
   "Build the icon NAME from COLLECTION.
 
 Icon is drawn using FG-COLOR (default is `default' face's foreground)
 on a BG-COLOR background (default transparent). Optional integer ZOOM
 level control the size of the icon. Default size is 2x1 characters.
 FG-COLOR or BG-COLOR also could be a face.  In this case colors
-specified in `:foreground' or `:background' attribute is used."
-  
+specified in `:foreground' or `:background' attribute is used.
+
+MARGIN-DIVIDER is used to calculate overall margin size for resulting
+svg icon in case its size is larger then original svg image.  Overall
+margin will equal to svg icon height divided by MARGIN-DIVIDER,
+meaning the larger MARGIN-DIVIDER you specify the smaller margins you
+get.  By default MARGIN-DIVIDER is equal to 2, i.e. half of the image
+is for the margins. MARGIN-DIVIDER can't be 0 for the obvious reasons.
+If resulting svg icon is smaller then original svg image, then
+resulting image will have no margins, and MARGIN-DIVIDER is ignored."
+
   (let* ((root (svg-icon-get-data collection name))
 
          ;; Read original viewbox
@@ -144,7 +153,8 @@ specified in `:foreground' or `:background' attribute is used."
 
          ;; Compute the new viewbox (adjust y origin and height)
          (ratio (/ view-width svg-width))
-         (delta-h (ceiling (/ (- view-height (* svg-height ratio) ) 2)))
+         (delta-h (ceiling (/ (- view-height (* svg-height ratio))
+                              (or margin-divider 2))))
          (view-y (- view-y delta-h))
          (view-height (+ view-height (* delta-h 2)))
 
