@@ -1,12 +1,12 @@
 
 ### Introduction
 
-This library allows to create svg icons by parsing remote collections
-whose license are compatibles with GNU Emacs. The default size of an
-icon is exactly 2x1 characters such that it can be inserted inside a
-text without disturbing alignment. Note that aach icon is cached
-locally to speed-up loading the next time you use it. If for some
-reason the cache is corrupted you can  force reload using the
+This library allows you to create SVG icons by parsing remote collections,
+whose license are compatible with GNU Emacs. The default size of an
+icon is exactly 2x1 characters, such that it can be inserted into
+text, without disturbing alignment. Note that each icon is cached
+locally, to speed-up loading the next time you use it. If for some
+reason the cache is corrupted, you can force reload using the
 `svg-icon-get-data` function.
 
 ### Usage
@@ -29,17 +29,17 @@ reason the cache is corrupted you can  force reload using the
 
 ![](screenshot.png)
 
-
 ### Available collections:
 
-If you want to add new collections (i.e. URL), make sure the icons are
-monochrome and that their size are consistent. Currently, collections
-are:
+If you want to add a new collections (i.e. URL), make sure the icons are
+monochrome and that their sizes are consistent. 
+
+The built-in collections are:
 
 - [Boxicons](https://github.com/atisawd/boxicons), available under a
   Creative Commons 4.0 license.  As of version 2.07 (December 2020),
   this collection offers 1500 icons in two styles (regular & solid).
-  Browse [gallery](https://boxicons.com)
+  [Browse gallery](https://boxicons.com)
   
   ![](boxicons.png)
   
@@ -54,15 +54,13 @@ are:
   available under an Apache 2.0 license.  As of version 4.0.0
   (December 2020), this collection offers 5000+ icons in 4 styles
   (filled, outlined, rounded, sharp).
-  Browse [gallery](https://materialdesignicons.com)
+  [Browse gallery](https://materialdesignicons.com)
 
   ![](material.png)
 
 - [Bootstrap](https://github.com/twbs/icons), available under an MIT
   license.  As of version 1.2.1 (December 2020), this collection
-  offers 1200+ icons in 2 styles (regular & filled). Browse
-  [gallery](https://icons.getbootstrap.com)
+  offers 1200+ icons in 2 styles (regular & filled). 
+  [Browse gallery](https://icons.getbootstrap.com)
 
   ![](bootstrap.png)
-
-
